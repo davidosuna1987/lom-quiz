@@ -1,0 +1,18 @@
+.pointer-events-none{
+  pointer-events: none !important;
+}
+
+.is-blinking{
+  animation: blink 1s infinite;
+}
+
+/* TEXT UTILS */
+.font-secondary{
+  font-family: $font-secondary;
+}
+
+.has-text-primary{ color: $primary-color !important }
+.has-text-secondary{ color: $secondary-color !important }
+.has-text-danger{ color: $danger-color !important }
+.has-text-success{ color: $success-color !important }
+.has-text-gray{ color: $gray-color !important }

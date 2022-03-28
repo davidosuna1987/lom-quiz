@@ -1,0 +1,68 @@
+.quiz-component{
+  width: $component-width;
+  max-width: 90vw;
+  margin: 200px auto 0;
+  padding: 0 20px;
+
+  .question-nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    &__item{
+      background-color: transparent;
+      border: solid $border-width $success-color;
+      color: $success-color;
+      font-weight: bolder;
+      padding: 5px 10px;
+      display: inline-block;
+      cursor: default;
+
+      &:hover:not(.is-disabled), &.is-next:focus:not(.is-disabled){
+        background-color: $success-color;
+        color: $black-color;
+      }
+
+      &.is-disabled{
+        border-color: gainsboro;
+        color: gainsboro;
+        background-color: transparent;
+        pointer-events: none;
+        opacity: 0.3;
+      }
+
+      &:first-child{
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &.lom-alive{
+    .question-component :not([class^="lom"]):not(.countdown-component), .question-nav{
+      pointer-events: none;
+      // opacity: 0.3;
+    }
+  }
+
+  &.is-grayscale{
+    .results,
+    .question-nav,
+    .lom-component,
+    .countdown-component{
+      filter: grayscale(1);
+    }
+  }
+
+  @media(min-width:768px){
+    .question-nav{
+      position: initial;
+      justify-content: flex-end;
+      margin-top: 10px;
+      padding: 0;
+    }
+  }
+}

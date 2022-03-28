@@ -1,0 +1,40 @@
+.lom-component{
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(3rem, 3rem);
+
+  .lom__x, .lom__y{
+    width: $lom-size;
+    height: $lom-size;
+  }
+
+  &.is-alive{
+    transform: translate(0, 0);
+
+    .lom__x{
+      animation: runawayX 2.25s linear infinite alternate;
+    }
+
+    .lom__y{
+      animation: runawayY 1.85s linear infinite alternate;
+    }
+  }
+
+  .hunt-lom{
+    position: absolute;
+    top: 3vh;
+    left: 50vw;
+    width: 100vw;
+    max-width: 550px;
+    text-align: center;
+    font-size: 4rem;
+    transform: translateX(-50%);
+  }
+}
+
+.is-grayscale{
+  .lom-component{
+    filter: grayscale(1)
+  }
+}

@@ -1,0 +1,46 @@
+:root{
+  --black-color: #{$black-color};
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --danger-color: #{$danger-color};
+  --success-color: #{$success-color};
+  --gray-color: #{$gray-color};
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  outline: none;
+  user-select: none;
+}
+
+body{
+  font-family: monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+#app{
+  position: relative;
+  z-index: 2;
+}
+
+.prologue-play-button{
+  font-family: $font-secondary;
+  border: solid 10px $success-color;
+  background-color: transparent;
+  color: $success-color;
+  font-size: 3rem;
+  font-weight: bolder;
+  padding: 30px 40px 27px;
+  display: block;
+  margin: 100px auto;
+
+  &:hover{
+    background-color: $success-color;
+    color: $black-color;
+  }
+}

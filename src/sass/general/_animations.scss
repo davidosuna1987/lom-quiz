@@ -1,0 +1,14 @@
+@keyframes blink{
+	0% { opacity: 0 }
+	49% { opacity: 0 }
+	50% { opacity: 1 }
+}
+
+// LOM
+@keyframes runawayX{
+  100% { transform: translateX( calc(100vw - #{$lom-size}) ) }
+}
+
+@keyframes runawayY{
+  100% { transform: translateY( calc(100vh - #{$lom-size}) ) }
+}

@@ -1,0 +1,32 @@
+.prologue-component{
+  width: $component-width;
+  max-width: 90vw;
+  margin: 200px auto 0;
+  text-align: center;
+
+  .typing-span{
+    margin-bottom: 20px;
+    color: $success-color;
+    font-family: monospace;
+  }
+
+  .ti-cursor{
+    color: $success-color !important;
+  }
+
+  .prologue-start-button{
+    border: solid $border-width $success-color;
+    padding: 10px 25px;
+    background-color: transparent;
+    color: $success-color;
+    font-family: monospace;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+
+    &:hover{
+      background-color: $success-color;
+      color: $black-color;
+    }
+  }
+}
